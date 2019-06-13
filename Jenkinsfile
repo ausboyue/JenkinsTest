@@ -2,7 +2,7 @@
 pipeline {
 	agent any
 	environment {
-		gradleHome = tool 'mygradle-4.10'     
+		gradleHome = tool 'mygradle-5.1.1'     
 	}
 	stages {
 		stage('更新项目代码') {
