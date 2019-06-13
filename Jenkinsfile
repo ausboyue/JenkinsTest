@@ -16,7 +16,7 @@ pipeline {
 					if (isUnix()) {
 						sh "'${gradleHome}/bin/gradle' -v"
 					} else {
-						bat "${gradleHome}\\bin\\gradle clean jacocoTestReport buildJenkinsDemoApk${params.Environment} -stacktrace -debug -PIS_JENKINS=true -Pandroid.buildCacheDir=D:/android-build-cache"
+						bat "${gradleHome}\\bin\\gradle clean  buildJenkinsDemoApk${params.Environment} -stacktrace -debug -PIS_JENKINS=true -Pandroid.buildCacheDir=D:/android-build-cache"
 					}	
 				}
 			}
