@@ -7,7 +7,7 @@ pipeline {
 	stages {
 		stage('更新项目代码') {
 			steps {
-				checkout([$class: 'GitSCM', branches: [[name: '*/release']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '9e4bdd05-b24f-4ca1-b173-fbc24d4c93ec', url: 'http://192.168.1.15:8080/tfs/Mobile.Dev/Android/_git/EhaiCarService/']]])
+				checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '9e4bdd05-b24f-4ca1-b173-fbc24d4c93ec', url: 'http://192.168.1.15:8080/tfs/Mobile.Dev/Android/_git/EhaiCarService/']]])
 			}
 		}
 		stage('构建应用') {
